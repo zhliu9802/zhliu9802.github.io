@@ -8,14 +8,14 @@
       <link href="/2023/03/27/%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D/"/>
       <url>/2023/03/27/%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D/</url>
       
-        <content type="html"><![CDATA[<h1 id="数字签名（DSA）"><a href="#数字签名（DSA）" class="headerlink" title="数字签名（DSA）"></a>数字签名（DSA）</h1><p>数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。</p><h2 id="1-椭圆曲线数字签名（ECDSA）"><a href="#1-椭圆曲线数字签名（ECDSA）" class="headerlink" title="1 椭圆曲线数字签名（ECDSA）"></a>1 椭圆曲线数字签名（ECDSA）</h2><h2 id="2-素数群数字签名（DSA）"><a href="#2-素数群数字签名（DSA）" class="headerlink" title="2 素数群数字签名（DSA）"></a>2 素数群数字签名（DSA）</h2>]]></content>
+        <content type="html"><![CDATA[<h1 id="数字签名（DSA）"><a href="#数字签名（DSA）" class="headerlink" title="数字签名（DSA）"></a>数字签名（DSA）</h1><p>数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。</p><h2 id="1-椭圆曲线数字签名（ECDSA）"><a href="#1-椭圆曲线数字签名（ECDSA）" class="headerlink" title="1 椭圆曲线数字签名（ECDSA）"></a>1 椭圆曲线数字签名（ECDSA）</h2><h2 id="2-素数群数字签名（DSA）"><a href="#2-素数群数字签名（DSA）" class="headerlink" title="2 素数群数字签名（DSA）"></a>2 素数群数字签名（DSA）</h2><p>素数群 $G$ 的阶为 $q$，生成元为 <code>g</code>，哈希函数 $H:{0,1}^*\to \mathbb{Z}_q $，哈希函数 $H^{‘}:G\to\mathbb{Z}_q$</p><p><strong>密钥生成：</strong></p><p>私钥为随机数 $x\in\mathbb{Z}_q$，公钥为 $y$，其中 $y&#x3D;g^x$</p><p><strong>签名：</strong></p><p>对于消息 $m\in\mathbb{Z}_q$，选择随机数 $k\in\mathbb{Z}_q$，计算 $R&#x3D;g^{k^{-1}}$，计算 $r&#x3D;H^{‘}(R)$，计算 $s&#x3D;k(m+xr)mod\ q$，则最终的签名为 $(r,s)$</p><p><strong>验证：</strong></p><p>校验 $(r,s)$ 的取值范围 $\mathbb{Z}_q$，计算 $R^{‘}&#x3D;g^{ms^{-1}mod\ q}y^{rs^{-1}mod\ q}$，校验 $r\overset{?}{&#x3D;} H’(R’)$</p><p><strong>公式推导：</strong><br>$$<br>R’&#x3D;g^{ms^{-1}mod\ q}y^{rs^{-1}mod\ q}&#x3D;g^{ms^{-1}mod\ q}g^{xrs^{-1}mod\ q}&#x3D;g^{s^{-1}(m+xr)mod\ q}&#x3D;g^{k^{-1}}&#x3D;R<br>$$</p>]]></content>
       
       
       <categories>
           
           <category> 密码学 </category>
           
-          <category> 数字签名 </category>
+          <category> 密码学基础 </category>
           
       </categories>
       

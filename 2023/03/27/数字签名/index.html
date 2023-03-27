@@ -6,15 +6,15 @@
   <meta name="keywords" content=" 数字签名 ">
   <meta name="description" content="数字签名 | 积水成河">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="数字签名（DSA）数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。 1 椭圆曲线数字签名（ECDSA）2 素数群数字签名（DSA）">
+<meta name="description" content="数字签名（DSA）数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。 1 椭圆曲线数字签名（ECDSA）2 素数群数字签名（DSA）素数群 $G$ 的阶为 $q$，生成元为 g，哈希函数 $H:{0,1}^*\to \mathbb{Z}_q $，哈希函数 $H^{‘}:G\to\mathbb{Z}_q$ 密钥生成： 私钥为随机数 $x\in\mathbb{Z}_q$，公钥为 $y$，其">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数字签名">
 <meta property="og:url" content="http://example.com/2023/03/27/%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D/index.html">
 <meta property="og:site_name" content="积水成河">
-<meta property="og:description" content="数字签名（DSA）数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。 1 椭圆曲线数字签名（ECDSA）2 素数群数字签名（DSA）">
+<meta property="og:description" content="数字签名（DSA）数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。 1 椭圆曲线数字签名（ECDSA）2 素数群数字签名（DSA）素数群 $G$ 的阶为 $q$，生成元为 g，哈希函数 $H:{0,1}^*\to \mathbb{Z}_q $，哈希函数 $H^{‘}:G\to\mathbb{Z}_q$ 密钥生成： 私钥为随机数 $x\in\mathbb{Z}_q$，公钥为 $y$，其">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-27T08:34:53.000Z">
-<meta property="article:modified_time" content="2023-03-27T08:42:08.385Z">
+<meta property="article:modified_time" content="2023-03-27T09:04:17.958Z">
 <meta property="article:author" content="zhliu">
 <meta property="article:tag" content="数字签名">
 <meta name="twitter:card" content="summary">
@@ -203,9 +203,9 @@
                         <ul class="sub hide">
                             
                                 <li>
-                                    <div data-rel="密码学<--->数字签名">
+                                    <div data-rel="密码学<--->密码学基础">
                                         
-                                        数字签名
+                                        密码学基础
                                         
                                             <small>(1
                                                 )</small>
@@ -310,7 +310,7 @@
     <nav id="title-list-nav">
         
         
-        <a  class="全部文章 密码学 数字签名 "
+        <a  class="全部文章 密码学 密码学基础 "
            href="/2023/03/27/%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D/"
            data-tag="数字签名"
            data-author="" >
@@ -359,7 +359,7 @@
             
             <a  data-rel="密码学">密码学</a> > 
             
-            <a  data-rel="密码学&lt;---&gt;数字签名">数字签名</a>
+            <a  data-rel="密码学&lt;---&gt;密码学基础">密码学基础</a>
             
         </span>
         
@@ -374,7 +374,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-03-27 16:42:08'>2023-03-27 16:34</time>
+            发布时间 : <time class="date" title='最后更新: 2023-03-27 17:04:17'>2023-03-27 16:34</time>
         
     </div>
     <div class="article-meta">
@@ -413,7 +413,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="数字签名（DSA）"><a href="#数字签名（DSA）" class="headerlink" title="数字签名（DSA）"></a>数字签名（DSA）</h1><p>数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。</p>
-<h2 id="1-椭圆曲线数字签名（ECDSA）"><a href="#1-椭圆曲线数字签名（ECDSA）" class="headerlink" title="1 椭圆曲线数字签名（ECDSA）"></a>1 椭圆曲线数字签名（ECDSA）</h2><h2 id="2-素数群数字签名（DSA）"><a href="#2-素数群数字签名（DSA）" class="headerlink" title="2 素数群数字签名（DSA）"></a>2 素数群数字签名（DSA）</h2>
+<h2 id="1-椭圆曲线数字签名（ECDSA）"><a href="#1-椭圆曲线数字签名（ECDSA）" class="headerlink" title="1 椭圆曲线数字签名（ECDSA）"></a>1 椭圆曲线数字签名（ECDSA）</h2><h2 id="2-素数群数字签名（DSA）"><a href="#2-素数群数字签名（DSA）" class="headerlink" title="2 素数群数字签名（DSA）"></a>2 素数群数字签名（DSA）</h2><p>素数群 $G$ 的阶为 $q$，生成元为 <code>g</code>，哈希函数 $H:{0,1}^*\to \mathbb{Z}_q $，哈希函数 $H^{‘}:G\to\mathbb{Z}_q$</p>
+<p><strong>密钥生成：</strong></p>
+<p>私钥为随机数 $x\in\mathbb{Z}_q$，公钥为 $y$，其中 $y&#x3D;g^x$</p>
+<p><strong>签名：</strong></p>
+<p>对于消息 $m\in\mathbb{Z}_q$，选择随机数 $k\in\mathbb{Z}_q$，计算 $R&#x3D;g^{k^{-1}}$，计算 $r&#x3D;H^{‘}(R)$，计算 $s&#x3D;k(m+xr)mod\ q$，则最终的签名为 $(r,s)$</p>
+<p><strong>验证：</strong></p>
+<p>校验 $(r,s)$ 的取值范围 $\mathbb{Z}_q$，计算 $R^{‘}&#x3D;g^{ms^{-1}mod\ q}y^{rs^{-1}mod\ q}$，校验 $r\overset{?}{&#x3D;} H’(R’)$</p>
+<p><strong>公式推导：</strong><br>$$<br>R’&#x3D;g^{ms^{-1}mod\ q}y^{rs^{-1}mod\ q}&#x3D;g^{ms^{-1}mod\ q}g^{xrs^{-1}mod\ q}&#x3D;g^{s^{-1}(m+xr)mod\ q}&#x3D;g^{k^{-1}}&#x3D;R<br>$$</p>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 zhliu9802@163.com </span>
     </div>
