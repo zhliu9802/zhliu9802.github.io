@@ -11,6 +11,14 @@
         <content type="html"><![CDATA[<h1 id="数字签名（DSA）"><a href="#数字签名（DSA）" class="headerlink" title="数字签名（DSA）"></a>数字签名（DSA）</h1><p>数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。</p><h2 id="1-椭圆曲线数字签名（ECDSA）"><a href="#1-椭圆曲线数字签名（ECDSA）" class="headerlink" title="1 椭圆曲线数字签名（ECDSA）"></a>1 椭圆曲线数字签名（ECDSA）</h2><h2 id="2-素数群数字签名（DSA）"><a href="#2-素数群数字签名（DSA）" class="headerlink" title="2 素数群数字签名（DSA）"></a>2 素数群数字签名（DSA）</h2>]]></content>
       
       
+      <categories>
+          
+          <category> 密码学 </category>
+          
+          <category> 数字签名 </category>
+          
+      </categories>
+      
       
         <tags>
             
