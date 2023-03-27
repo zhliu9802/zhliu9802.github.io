@@ -13,16 +13,16 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Git1 版本控制版本控制是一种记录一个或若干个文件内容变化，以便将来查阅特定版本修订情况的系统 1.1 集中式版本控制集中化的版本控制系统诸如 CVS，SVN 以及 Perforce 等，都有一个单一的集 中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。多年以来，这已成为版本控制系统的标准做法。 1.2 分布式版本控制2 初始化配置">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/Git/%E6%A0%91%E5%AF%B9%E8%B1%A1.png">
+<meta property="og:image" content="http://example.com/2023/03/27/Git/%E6%A0%91%E5%AF%B9%E8%B1%A1.png">
 <meta property="og:image" content="http://example.com/2023/03/27/Git/%E6%9C%AA%E6%9A%82%E5%AD%98%E6%96%87%E4%BB%B6%E7%8A%B6%E6%80%81.png">
 <meta property="og:image" content="http://example.com/2023/03/27/Git/%E5%B7%B2%E6%9A%82%E5%AD%98%E6%9C%AA%E6%8F%90%E4%BA%A4%E6%96%87%E4%BB%B6%E7%8A%B6%E6%80%81.png">
 <meta property="og:image" content="http://example.com/2023/03/27/Git/%E4%BF%AE%E6%94%B9%E6%9A%82%E5%AD%98%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%87%E4%BB%B6%E7%8A%B6%E6%80%81.png">
 <meta property="article:published_time" content="2023-03-27T03:21:52.000Z">
-<meta property="article:modified_time" content="2023-03-27T03:26:52.072Z">
+<meta property="article:modified_time" content="2023-03-27T03:27:54.773Z">
 <meta property="article:author" content="zhliu">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/Git/%E6%A0%91%E5%AF%B9%E8%B1%A1.png">
+<meta name="twitter:image" content="http://example.com/2023/03/27/Git/%E6%A0%91%E5%AF%B9%E8%B1%A1.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -308,7 +308,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-03-27 11:26:52'>2023-03-27 11:21</time>
+            发布时间 : <time class="date" title='最后更新: 2023-03-27 11:27:54'>2023-03-27 11:21</time>
         
     </div>
     <div class="article-meta">
@@ -534,7 +534,10 @@ $ find .git/objects/ -type f
 .git/objects/fa/49b077972391ad58037050f2a75f74e3671e92
 </code></pre>
 <p>此时，最后的树对象为：</p>
-<p><img src="/./Git/%E6%A0%91%E5%AF%B9%E8%B1%A1.png" alt="image-20230325230751244"></p>
+<img src="/2023/03/27/Git/树对象.png" alt="image-20230325230751244" style="zoom:80%;">
+
+
+
 <p><strong>命令总结：</strong></p>
 <ul>
 <li><code>git update-index --add --cacheinfo &lt;文件模式&gt; &lt;哈希值&gt; &lt;文件名&gt;</code>：给git对象取文件名，并将该记录保存到暂存区（不会保存到git数据库中）<ul>
