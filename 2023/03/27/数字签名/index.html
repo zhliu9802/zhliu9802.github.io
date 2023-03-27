@@ -6,15 +6,15 @@
   <meta name="keywords" content=" 数字签名 ">
   <meta name="description" content="数字签名 | 积水成河">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="数字签名（DSA）数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。 1 椭圆曲线数字签名（ECDSA）2 素数群数字签名（DSA）素数群 $G$ 的阶为 $q$，生成元为 $g$，哈希函数 $H:{0,1}^*\to \mathbb{Z}_q $，哈希函数 $H^{‘}:G\to\mathbb{Z}_q$ 密钥生成： 私钥为随机数 $x\in\mathbb{Z}_q$，公钥为 $y$">
+<meta name="description" content="数字签名（DSA）数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。 1 椭圆曲线数字签名（ECDSA）参考链接：Understanding How ECDSA Protects Your Data 1.1 什么是ECDSAECDSA是**Elliptic Curve Digital Signature Algorithm**（椭圆曲线数字签名）的简称，主要用于对数据（比如一个文件）创">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数字签名">
 <meta property="og:url" content="http://example.com/2023/03/27/%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D/index.html">
 <meta property="og:site_name" content="积水成河">
-<meta property="og:description" content="数字签名（DSA）数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。 1 椭圆曲线数字签名（ECDSA）2 素数群数字签名（DSA）素数群 $G$ 的阶为 $q$，生成元为 $g$，哈希函数 $H:{0,1}^*\to \mathbb{Z}_q $，哈希函数 $H^{‘}:G\to\mathbb{Z}_q$ 密钥生成： 私钥为随机数 $x\in\mathbb{Z}_q$，公钥为 $y$">
+<meta property="og:description" content="数字签名（DSA）数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。 1 椭圆曲线数字签名（ECDSA）参考链接：Understanding How ECDSA Protects Your Data 1.1 什么是ECDSAECDSA是**Elliptic Curve Digital Signature Algorithm**（椭圆曲线数字签名）的简称，主要用于对数据（比如一个文件）创">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-27T08:34:53.000Z">
-<meta property="article:modified_time" content="2023-03-27T09:13:59.905Z">
+<meta property="article:modified_time" content="2023-03-27T13:47:26.166Z">
 <meta property="article:author" content="zhliu">
 <meta property="article:tag" content="数字签名">
 <meta name="twitter:card" content="summary">
@@ -374,7 +374,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-03-27 17:13:59'>2023-03-27 16:34</time>
+            发布时间 : <time class="date" title='最后更新: 2023-03-27 21:47:26'>2023-03-27 16:34</time>
         
     </div>
     <div class="article-meta">
@@ -396,7 +396,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%EF%BC%88DSA%EF%BC%89"><span class="toc-text">数字签名（DSA）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%EF%BC%88ECDSA%EF%BC%89"><span class="toc-text">1 椭圆曲线数字签名（ECDSA）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%B4%A0%E6%95%B0%E7%BE%A4%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%EF%BC%88DSA%EF%BC%89"><span class="toc-text">2 素数群数字签名（DSA）</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%EF%BC%88DSA%EF%BC%89"><span class="toc-text">数字签名（DSA）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%EF%BC%88ECDSA%EF%BC%89"><span class="toc-text">1 椭圆曲线数字签名（ECDSA）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E4%BB%80%E4%B9%88%E6%98%AFECDSA"><span class="toc-text">1.1 什么是ECDSA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%8E%9F%E7%90%86"><span class="toc-text">1.2 原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8ECDSA"><span class="toc-text">1.3 为什么使用ECDSA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E7%AD%BE%E5%90%8D"><span class="toc-text">1.4 签名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-%E9%AA%8C%E8%AF%81%E7%AD%BE%E5%90%8D"><span class="toc-text">1.5 验证签名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-ECDSA%E7%AE%97%E6%B3%95"><span class="toc-text">1.4 ECDSA算法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%B4%A0%E6%95%B0%E7%BE%A4%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%EF%BC%88DSA%EF%BC%89"><span class="toc-text">2 素数群数字签名（DSA）</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -413,7 +413,40 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="数字签名（DSA）"><a href="#数字签名（DSA）" class="headerlink" title="数字签名（DSA）"></a>数字签名（DSA）</h1><p>数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。</p>
-<h2 id="1-椭圆曲线数字签名（ECDSA）"><a href="#1-椭圆曲线数字签名（ECDSA）" class="headerlink" title="1 椭圆曲线数字签名（ECDSA）"></a>1 椭圆曲线数字签名（ECDSA）</h2><h2 id="2-素数群数字签名（DSA）"><a href="#2-素数群数字签名（DSA）" class="headerlink" title="2 素数群数字签名（DSA）"></a>2 素数群数字签名（DSA）</h2><p>素数群 $G$ 的阶为 $q$，生成元为 $g$，哈希函数 $H:{0,1}^*\to \mathbb{Z}_q $，哈希函数 $H^{‘}:G\to\mathbb{Z}_q$</p>
+<h2 id="1-椭圆曲线数字签名（ECDSA）"><a href="#1-椭圆曲线数字签名（ECDSA）" class="headerlink" title="1 椭圆曲线数字签名（ECDSA）"></a>1 椭圆曲线数字签名（ECDSA）</h2><p><a target="_blank" rel="noopener" href="https://www.instructables.com/Understanding-how-ECDSA-protects-your-data/">参考链接：Understanding How ECDSA Protects Your Data</a></p>
+<h3 id="1-1-什么是ECDSA"><a href="#1-1-什么是ECDSA" class="headerlink" title="1.1 什么是ECDSA"></a>1.1 什么是ECDSA</h3><p><code>ECDSA</code>是**<a href="https://link.zhihu.com/?target=https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">Elliptic Curve Digital Signature Algorithm</a>**（椭圆曲线数字签名）的简称，主要用于对数据（比如一个文件）创建数字签名，以便于你在不破坏它的安全性的前提下对它的真实性进行验证。可以将它想象成一个实际的签名，你可以识别部分人的签名，但是你无法在别人不知道的情况下伪造它。而ECDSA签名和真实签名的区别在于，伪造ECDSA签名是根本不可能的。</p>
+<h3 id="1-2-原理"><a href="#1-2-原理" class="headerlink" title="1.2 原理"></a>1.2 原理</h3><p>原理非常简单，有一个数学方程，在图上画了一条曲线，然后你在这条曲线上面随机选取了一个点作为你的 <code>原点(point of origin)</code>。接着你产生了一个随机数，作为你的 <code>私钥(Private key)</code>，最后你用上面的随机数和原点通过一些复杂的魔法数学方程得到该条曲线上面的第二个点，这是你的 <code>公钥(Public key)</code>。</p>
+<p>当你想要对一个文件进行签名的时候，你会用这个私钥（随机数）和文件的哈希（一串独一无二的代表该文件的数）组成一个魔法数学方程，这就是你的签名。签名本身将被分成两部分，称为 <code>r</code> 和 <code>s</code> 。为了验证签名的正确性，你只需要公钥（用私钥在曲线上面产生的点）并将公钥和签名的一部分 <code>s</code> 一起代入另外一个方程，如果这个签名是由私钥正确签名过的数字签名，那么它将给出签名的另外一部分 <code>R</code>。简单来说，一个数字签名包含两个数字：<code>r</code>和<code>s</code>。你使用一个私钥来产生<code>r</code>和<code>s</code>，如果将公钥和 <code>s</code> 代入被选定的魔法数学方程给出 <code>r</code> 的话，这个签名就是有效的。仅仅知道公钥是无法知道私钥或者创建出数字签名。</p>
+<h3 id="1-3-为什么使用ECDSA"><a href="#1-3-为什么使用ECDSA" class="headerlink" title="1.3 为什么使用ECDSA"></a>1.3 为什么使用ECDSA</h3><p>对于 <code>ECDSA</code> 算法，需要知道以下参数：</p>
+<ul>
+<li><code>a b</code>：椭圆曲线方程 $y^2&#x3D;x^3+a\cdot x+b$ 的参数</li>
+<li><code>p</code>：模运算的底</li>
+<li><code>N</code>：椭圆曲线上点的个数</li>
+<li><code>G</code>：选中的参考的起点，可以是曲线上的任意一点</li>
+</ul>
+<p>总结一下：首先，你有一对密钥：公钥和私钥，私钥是一个随机数，也是160比特大小，公钥是将曲线上的点 $G$ 与私钥相乘以后的曲线上的点。令 $dA$ 表示私钥，一个随机数，$Qa$ 表示公钥，曲线上面的一个点，我们有 $Qa&#x3D;dA\cdot G$，其中 $G$ 是曲线上面的参考点。</p>
+<h3 id="1-4-签名"><a href="#1-4-签名" class="headerlink" title="1.4 签名"></a>1.4 签名</h3><p>签名本身是40字节，由各20字节的值来进行表示。第一个值为 $R$，第二个为 $S$。值对 $(R,S)$ 就是 <code>ECDSA</code> 签名。</p>
+<p>如何创建这一值对：</p>
+<ul>
+<li>生成一个20字节的随机数 $k$</li>
+<li>利用点乘法计算 $P &#x3D; k\cdot G$，其中 $P$ 的<strong>横坐标</strong>就是 $R$</li>
+<li>利用SHA1计算信息 $m$ 的哈希，得到一个20字节的巨大的整数 $z$</li>
+<li>计算 $S&#x3D;k^{-1}(z+dA\cdot R)mod\ p$</li>
+</ul>
+<p>其中 $k$ 是用来生成 $R$ 的随机数，$k^{-1}$ 是 $k$ 的模的乘法逆元。</p>
+<h3 id="1-5-验证签名"><a href="#1-5-验证签名" class="headerlink" title="1.5 验证签名"></a>1.5 验证签名</h3><p>只需要计算<br>$$<br>P’&#x3D;S^{-1}\cdot z\cdot G+S^{-1}\cdot R\cdot Qa<br>$$<br>如果 $P’$ 的横坐标等于 $R$，就说明签名是有效的。</p>
+<p><strong>推导过程：</strong><br>$$<br>P’&#x3D;S^{-1}\cdot z\cdot G+S^{-1}\cdot R\cdot Qa\&#x3D;S^{-1}\cdot z\cdot G+S^{-1}\cdot R\cdot dA\cdot G\&#x3D;S^{-1}\cdot G(z+R\cdot dA)\&#x3D;k\cdot G\&#x3D;P<br>$$</p>
+<h3 id="1-4-ECDSA算法"><a href="#1-4-ECDSA算法" class="headerlink" title="1.4 ECDSA算法"></a>1.4 ECDSA算法</h3><p>比特币使用该算法来生成账户的公私钥以及对交易和区块进行验证。</p>
+<p><strong>初始化：</strong></p>
+<p>椭圆曲线群 $\mathbb{G}$ 的生成元为 $G$，阶为 $n$，点的横纵坐标的取值空间为 $F_q$。</p>
+<p><strong>密钥生成：</strong></p>
+<p>私钥 $x\in [1,n-1]$ 和公钥 $PK$，满足离散对数关系 $PK&#x3D;x\cdot G$</p>
+<p><strong>签名：</strong></p>
+<p>输入消息 $M$，计算 $m:&#x3D;hash(M)mod\ n$；选择随机数 $k\in[1,n-1]$，计算 $R:&#x3D;k^{-1}\cdot G$，取 $R$ 横坐标 $r:&#x3D;x_R mod\ n$；计算 $s:&#x3D;k(m+xr)mod\ n$，则签名为 $(r,s)$</p>
+<p><strong>签名的另一种描述：</strong>选择随机数 $k\in[1,n-1]$，计算 $R:&#x3D;k\cdot G$，取 $R$ 横坐标 $r:&#x3D;x_R mod\ n$；计算 $s:&#x3D;k^{-1}(m+xr)mod\ n$，则签名为 $(r,s)$</p>
+<p>以上两种描述是一样的</p>
+<p><strong>验证：</strong></p>
+<h2 id="2-素数群数字签名（DSA）"><a href="#2-素数群数字签名（DSA）" class="headerlink" title="2 素数群数字签名（DSA）"></a>2 素数群数字签名（DSA）</h2><p>素数群 $G$ 的阶为 $q$，生成元为 $g$，哈希函数 $H:{0,1}^*\to \mathbb{Z}_q $，哈希函数 $H^{‘}:G\to\mathbb{Z}_q$</p>
 <p><strong>密钥生成：</strong></p>
 <p>私钥为随机数 $x\in\mathbb{Z}_q$，公钥为 $y$，其中 $y&#x3D;g^x$</p>
 <p><strong>签名：</strong></p>
