@@ -6,15 +6,15 @@
   <meta name="keywords" content=" 数字签名 ">
   <meta name="description" content="数字签名 | 积水成河">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="数字签名（DSA）数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。 1 椭圆曲线数字签名（ECDSA）2 素数群数字签名（DSA）素数群 $G$ 的阶为 $q$，生成元为 g，哈希函数 $H:{0,1}^*\to \mathbb{Z}_q $，哈希函数 $H^{‘}:G\to\mathbb{Z}_q$ 密钥生成： 私钥为随机数 $x\in\mathbb{Z}_q$，公钥为 $y$，其">
+<meta name="description" content="数字签名（DSA）数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。 1 椭圆曲线数字签名（ECDSA）2 素数群数字签名（DSA）素数群 $G$ 的阶为 $q$，生成元为 $g$，哈希函数 $H:{0,1}^*\to \mathbb{Z}_q $，哈希函数 $H^{‘}:G\to\mathbb{Z}_q$ 密钥生成： 私钥为随机数 $x\in\mathbb{Z}_q$，公钥为 $y$">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数字签名">
 <meta property="og:url" content="http://example.com/2023/03/27/%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D/index.html">
 <meta property="og:site_name" content="积水成河">
-<meta property="og:description" content="数字签名（DSA）数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。 1 椭圆曲线数字签名（ECDSA）2 素数群数字签名（DSA）素数群 $G$ 的阶为 $q$，生成元为 g，哈希函数 $H:{0,1}^*\to \mathbb{Z}_q $，哈希函数 $H^{‘}:G\to\mathbb{Z}_q$ 密钥生成： 私钥为随机数 $x\in\mathbb{Z}_q$，公钥为 $y$，其">
+<meta property="og:description" content="数字签名（DSA）数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。 1 椭圆曲线数字签名（ECDSA）2 素数群数字签名（DSA）素数群 $G$ 的阶为 $q$，生成元为 $g$，哈希函数 $H:{0,1}^*\to \mathbb{Z}_q $，哈希函数 $H^{‘}:G\to\mathbb{Z}_q$ 密钥生成： 私钥为随机数 $x\in\mathbb{Z}_q$，公钥为 $y$">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-27T08:34:53.000Z">
-<meta property="article:modified_time" content="2023-03-27T09:04:17.958Z">
+<meta property="article:modified_time" content="2023-03-27T09:13:59.905Z">
 <meta property="article:author" content="zhliu">
 <meta property="article:tag" content="数字签名">
 <meta name="twitter:card" content="summary">
@@ -374,7 +374,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-03-27 17:04:17'>2023-03-27 16:34</time>
+            发布时间 : <time class="date" title='最后更新: 2023-03-27 17:13:59'>2023-03-27 16:34</time>
         
     </div>
     <div class="article-meta">
@@ -413,7 +413,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="数字签名（DSA）"><a href="#数字签名（DSA）" class="headerlink" title="数字签名（DSA）"></a>数字签名（DSA）</h1><p>数字签名就是签名方用自己的私钥签名，验证方用签名方的公钥验证。</p>
-<h2 id="1-椭圆曲线数字签名（ECDSA）"><a href="#1-椭圆曲线数字签名（ECDSA）" class="headerlink" title="1 椭圆曲线数字签名（ECDSA）"></a>1 椭圆曲线数字签名（ECDSA）</h2><h2 id="2-素数群数字签名（DSA）"><a href="#2-素数群数字签名（DSA）" class="headerlink" title="2 素数群数字签名（DSA）"></a>2 素数群数字签名（DSA）</h2><p>素数群 $G$ 的阶为 $q$，生成元为 <code>g</code>，哈希函数 $H:{0,1}^*\to \mathbb{Z}_q $，哈希函数 $H^{‘}:G\to\mathbb{Z}_q$</p>
+<h2 id="1-椭圆曲线数字签名（ECDSA）"><a href="#1-椭圆曲线数字签名（ECDSA）" class="headerlink" title="1 椭圆曲线数字签名（ECDSA）"></a>1 椭圆曲线数字签名（ECDSA）</h2><h2 id="2-素数群数字签名（DSA）"><a href="#2-素数群数字签名（DSA）" class="headerlink" title="2 素数群数字签名（DSA）"></a>2 素数群数字签名（DSA）</h2><p>素数群 $G$ 的阶为 $q$，生成元为 $g$，哈希函数 $H:{0,1}^*\to \mathbb{Z}_q $，哈希函数 $H^{‘}:G\to\mathbb{Z}_q$</p>
 <p><strong>密钥生成：</strong></p>
 <p>私钥为随机数 $x\in\mathbb{Z}_q$，公钥为 $y$，其中 $y&#x3D;g^x$</p>
 <p><strong>签名：</strong></p>
@@ -437,6 +437,46 @@
 
 
 
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
     
 
 
