@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>积水成河</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="积水成河">
+  <title>熵以及KL散度等概念 | 积水成河</title>
+  <meta name="keywords" content=" KL散度 , 熵 ">
+  <meta name="description" content="熵以及KL散度等概念 | 积水成河">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="概率密度函数概率密度函数又称为概率密度 山峰线 分布函数山峰面 概率分布概率分布、分布律、概率函数 联合概率密度拱山峰面 $f(x,y)$ 联合分布函数山峰体$$F(x,y)&#x3D;\int_{-\infty}^{x} \int_{-\infty}^{y}f(u,v)dudv &#x3D;P(X\leq x, Y\leq y)$$ 联合分布律边缘概率密度$$f_X(x)&#x3D;\int_{">
 <meta property="og:type" content="article">
@@ -58,7 +58,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -427,12 +427,62 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-熵以及KL散度等概念" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%8F%B6%E8%90%BD%E9%98%81"><span class="toc-text">关于叶落阁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">熵以及KL散度等概念</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="密码学">密码学</a> > 
+            
+            <a  data-rel="密码学&lt;---&gt;密码学基础">密码学基础</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">KL散度</a>
+            
+            <a class="color2">熵</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2023-04-04 22:50:10'>2023-04-04 14:54</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%86%B5"><span class="toc-text">熵</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AC%E5%BC%8F"><span class="toc-text">公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Renyi-Entropy-%E7%91%9E%E4%B8%BD%E7%86%B5"><span class="toc-text">Renyi Entropy 瑞丽熵</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#KL%E6%95%A3%E5%BA%A6"><span class="toc-text">KL散度</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A4%E5%8F%89%E7%86%B5"><span class="toc-text">交叉熵</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -445,36 +495,113 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
-</blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
-</blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="关于叶落阁"><a href="#关于叶落阁" class="headerlink" title="关于叶落阁"></a>关于叶落阁</h2><p><strong>叶落阁</strong> 是阁主（杨玉杰）的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 生成，部署在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>主题 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
-<p>主要功能：</p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="熵"><a href="#熵" class="headerlink" title="熵"></a>熵</h1><p><strong>熵</strong>是一个物理学概念，它表示一个系统的不确定性程度，或者说是一个系统的混乱程度。</p>
+<p><strong>信息熵</strong>是一个叫香农的美国数学家将熵引入信息论中，并将它命名为“香农熵”或“信息熵”。</p>
+<p>熵与信息熵就好比帅哥与靓仔，实质上是指同一个东西，只是不同领域的叫法不一样。</p>
+<h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p>$$<br>H(x)&#x3D;-\sum_{i&#x3D;1}^np(x_i)\log p(x_i)<br>$$</p>
 <ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad&#x2F;手机等移动端适配</li>
-<li>页面全局快捷键 <a target="_blank" rel="noopener" href='http://yelog.org/2017/03/24/3-hexo-shortcuts/'>3-hexo快捷键说明</a></li>
+<li>$n$：随机变量可能的取值数</li>
+<li>$x$：随机变量</li>
+<li>$P(x)$：随机变量 $x$ 的概率函数</li>
 </ul>
+<h2 id="Renyi-Entropy-瑞丽熵"><a href="#Renyi-Entropy-瑞丽熵" class="headerlink" title="Renyi Entropy 瑞丽熵"></a>Renyi Entropy 瑞丽熵</h2><p><img src="/./%E7%86%B5%E4%BB%A5%E5%8F%8AKL%E6%95%A3%E5%BA%A6%E7%AD%89%E6%A6%82%E5%BF%B5/image-20230404153813768.png" alt="image-20230404153813768"></p>
+<img src="/2023/04/04/%E7%86%B5%E4%BB%A5%E5%8F%8AKL%E6%95%A3%E5%BA%A6%E7%AD%89%E6%A6%82%E5%BF%B5/image-20230404153942618.png" alt="image-20230404153942618" style="zoom:80%;">
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+<h1 id="KL散度"><a href="#KL散度" class="headerlink" title="KL散度"></a>KL散度</h1><p>KL散度就是两个概率分布间差异的<strong>非对称性</strong>度量。通俗的讲，KL散度是用来衡量同一个随机变量的两个不同分布之间的<strong>距离</strong>。<br>$$<br>D_{KL}(p||q)&#x3D;\sum_{i&#x3D;1}^np(x_i)log(\frac{p(x_i)}{q(x_i)})<br>$$<br>特性1：非对称性</p>
+<ul>
+<li>$D_{KL}(p||q)\neq D_{KL}(q||p)$</li>
+<li>$P$ 和 $Q$ 的概率分布完全一样才相等</li>
+</ul>
+<p>特性2：非负性（吉布斯不等式推导）</p>
+<ul>
+<li>$D_{KL}(p||q)$ 恒大于等于0</li>
+<li>$P$ 和 $Q$ 的概率分布完全一样才等于0</li>
+</ul>
+<img src="/2023/04/04/%E7%86%B5%E4%BB%A5%E5%8F%8AKL%E6%95%A3%E5%BA%A6%E7%AD%89%E6%A6%82%E5%BF%B5/image-20230404145744032.png" alt="image-20230404145744032" style="zoom:50%;">
+
+
+
+
+
+<p><strong>KL散度公式变形</strong><br>$$<br>D_{KL}(p||q) &#x3D; \sum_{i&#x3D;1}^np(x_i)log(\frac{p(x_i)}{q(x_i)})\&#x3D;\sum_{i&#x3D;1}^np(x_i)logp(x_i)-p(x_i)logq(x_i)\&#x3D;-(-\sum_{i&#x3D;1}^np(x_i)logp(x_i))-\sum_{i&#x3D;1}^np(x_i)logq(x_i)\&#x3D;H(P,Q)-H(P)<br>$$<br>即KL散度就是 <code>交叉熵-信息熵</code></p>
+<h1 id="交叉熵"><a href="#交叉熵" class="headerlink" title="交叉熵"></a>交叉熵</h1><p>交叉熵主要用于度量一个随机变量X的预测分布Q与真实分布P之间的差距。差距可以理解为距离、误差、失望值、困难程度、混乱程度、一辆车、一套房等<br>$$<br>H(P,Q)&#x3D;\sum_{i&#x3D;1}^np(x_i)\log q(x_i)\<br>H(P,Q)&#x3D;\sum_xp(x)\log (\frac{1}{q(x)})<br>$$<br><img src="/2023/04/04/%E7%86%B5%E4%BB%A5%E5%8F%8AKL%E6%95%A3%E5%BA%A6%E7%AD%89%E6%A6%82%E5%BF%B5/image-20230404151231817.png" alt="image-20230404151231817" style="zoom:80%;"></p>
+<p>结论1：预测越准确，交叉熵越小</p>
+<p>结论2：交叉熵只跟真实标签的预测概率值有关</p>
+<p><strong>交叉熵的最简公式</strong><br>$$<br>Cross_Entropy(p,q)&#x3D;-\log q(c_i)<br>$$<br>其中， $c_i$ 是正确标签</p>
+<img src="/2023/04/04/%E7%86%B5%E4%BB%A5%E5%8F%8AKL%E6%95%A3%E5%BA%A6%E7%AD%89%E6%A6%82%E5%BF%B5/image-20230404151809537.png" alt="image-20230404151809537" style="zoom:80%;">
+
+<img src="/2023/04/04/%E7%86%B5%E4%BB%A5%E5%8F%8AKL%E6%95%A3%E5%BA%A6%E7%AD%89%E6%A6%82%E5%BF%B5/image-20230404151954984.png" alt="image-20230404151954984" style="zoom:80%;">
+
+<p><img src="/./%E7%86%B5%E4%BB%A5%E5%8F%8AKL%E6%95%A3%E5%BA%A6%E7%AD%89%E6%A6%82%E5%BF%B5/image-20230404152343746.png"></p>
+<p><img src="/./%E7%86%B5%E4%BB%A5%E5%8F%8AKL%E6%95%A3%E5%BA%A6%E7%AD%89%E6%A6%82%E5%BF%B5/image-20230404152433530.png" alt="image-20230404152433530"></p>
+<p><img src="/./%E7%86%B5%E4%BB%A5%E5%8F%8AKL%E6%95%A3%E5%BA%A6%E7%AD%89%E6%A6%82%E5%BF%B5/image-20230404152451677.png" alt="image-20230404152451677"></p>
+<p><img src="/./%E7%86%B5%E4%BB%A5%E5%8F%8AKL%E6%95%A3%E5%BA%A6%E7%AD%89%E6%A6%82%E5%BF%B5/image-20230404152459444.png" alt="image-20230404152459444"></p>
+<p><img src="/./%E7%86%B5%E4%BB%A5%E5%8F%8AKL%E6%95%A3%E5%BA%A6%E7%AD%89%E6%A6%82%E5%BF%B5/image-20230404152529423.png" alt="image-20230404152529423"></p>
+<p><img src="/./%E7%86%B5%E4%BB%A5%E5%8F%8AKL%E6%95%A3%E5%BA%A6%E7%AD%89%E6%A6%82%E5%BF%B5/image-20230404152841339.png" alt="image-20230404152841339"></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 zhliu9802@163.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -483,11 +610,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>
