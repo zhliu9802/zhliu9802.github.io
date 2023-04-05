@@ -6,23 +6,20 @@
   <meta name="keywords" content=" 隐私计算 , 差分隐私 ">
   <meta name="description" content="差分隐私 | 积水成河">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="0x00 指数机制与Laplace机制在Laplace机制中，我们首先对数据库进行查询，然后再查询结果之上添加一定的噪声使其满足DP的要求。因此，返回的数据通常只是“接近准确”的。那么差分隐私能否允许我们得到真实的结果呢？在这种情况下，指数机制应运而生。 指数机制（The exponential mechanism）是为我们希望选择“最佳”响应的情况而设计的，但直接在计算数量上添加噪声会完全破坏其">
+<meta name="description" content="0x00 Laplace分布Laplace分布是统计学的概念，是一种连续的概率分布。如果随机变量的概率密度函数分布为：$$Lap(x|\mu,b)&#x3D;\frac{1}{2b}e^{-\frac{|x-\mu|}{b}}$$那么它就是拉普拉斯分布。其中，$\mu$ 是位置参数，即该分布关于 $x&#x3D;\mu$ 对称；$b&gt;0$ 是尺度参数。拉普拉斯分布的期望是 $\mu$， 方差">
 <meta property="og:type" content="article">
-<meta property="og:title" content="指数机制">
-<meta property="og:url" content="http://example.com/2023/04/05/%E6%8C%87%E6%95%B0%E6%9C%BA%E5%88%B6/index.html">
+<meta property="og:title" content="拉普拉斯机制">
+<meta property="og:url" content="http://example.com/2023/04/05/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%9C%BA%E5%88%B6/index.html">
 <meta property="og:site_name" content="积水成河">
-<meta property="og:description" content="0x00 指数机制与Laplace机制在Laplace机制中，我们首先对数据库进行查询，然后再查询结果之上添加一定的噪声使其满足DP的要求。因此，返回的数据通常只是“接近准确”的。那么差分隐私能否允许我们得到真实的结果呢？在这种情况下，指数机制应运而生。 指数机制（The exponential mechanism）是为我们希望选择“最佳”响应的情况而设计的，但直接在计算数量上添加噪声会完全破坏其">
+<meta property="og:description" content="0x00 Laplace分布Laplace分布是统计学的概念，是一种连续的概率分布。如果随机变量的概率密度函数分布为：$$Lap(x|\mu,b)&#x3D;\frac{1}{2b}e^{-\frac{|x-\mu|}{b}}$$那么它就是拉普拉斯分布。其中，$\mu$ 是位置参数，即该分布关于 $x&#x3D;\mu$ 对称；$b&gt;0$ 是尺度参数。拉普拉斯分布的期望是 $\mu$， 方差">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2023/04/05/%E6%8C%87%E6%95%B0%E6%9C%BA%E5%88%B6/image-20230405105514007.png">
-<meta property="og:image" content="http://example.com/2023/04/05/%E6%8C%87%E6%95%B0%E6%9C%BA%E5%88%B6/image-20230405105629709.png">
-<meta property="article:published_time" content="2023-04-05T02:06:24.000Z">
-<meta property="article:modified_time" content="2023-04-05T03:30:21.524Z">
+<meta property="article:published_time" content="2023-04-05T06:49:59.000Z">
+<meta property="article:modified_time" content="2023-04-05T07:26:49.590Z">
 <meta property="article:author" content="zhliu">
 <meta property="article:tag" content="隐私计算">
 <meta property="article:tag" content="差分隐私">
-<meta property="article:tag" content="指数机制">
+<meta property="article:tag" content="拉普拉斯机制">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/04/05/%E6%8C%87%E6%95%B0%E6%9C%BA%E5%88%B6/image-20230405105514007.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -158,7 +155,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(6)</small>
+                <small>(7)</small>
             
         </div>
     </li>
@@ -272,7 +269,7 @@
                         <i class="fold iconfont icon-right"></i>
                         
                         隐私计算
-                        <small>(1)</small>
+                        <small>(2)</small>
                         
                     </div>
                     
@@ -283,7 +280,7 @@
                                         
                                         差分隐私
                                         
-                                            <small>(1
+                                            <small>(2
                                                 )</small>
                                         
                                     </div>
@@ -320,7 +317,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="6">
+<input type="hidden" id="yelog_site_posts_number" value="7">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -375,6 +372,10 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>拉普拉斯机制</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>密度函数</a>
             </li>
         
@@ -408,6 +409,15 @@
 
     
     <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 隐私计算 差分隐私 "
+           href="/2023/04/05/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%9C%BA%E5%88%B6/"
+           data-tag="隐私计算,差分隐私,拉普拉斯机制"
+           data-author="" >
+            <span class="post-title" title="拉普拉斯机制">拉普拉斯机制</span>
+            <span class="post-date" title="2023-04-05 14:49:59">2023/04/05</span>
+        </a>
         
         
         <a  class="全部文章 隐私计算 差分隐私 "
@@ -512,7 +522,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-04-05 10:00:45'>2023-04-04 09:26</time>
+            发布时间 : <time class="date" title='最后更新: 2023-04-05 14:53:19'>2023-04-04 09:26</time>
         
     </div>
     <div class="article-meta">
@@ -534,7 +544,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#0x00-%E4%BB%80%E4%B9%88%E6%98%AF%E5%B7%AE%E5%88%86%E9%9A%90%E7%A7%81"><span class="toc-text">0x00 什么是差分隐私</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x01-%E6%95%B0%E5%AD%A6%E5%AE%9A%E4%B9%89"><span class="toc-text">0x01 数学定义</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%AE%9A%E4%B9%89"><span class="toc-text">基本定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%A5%E6%A0%BC%E5%B7%AE%E5%88%86%E9%9A%90%E7%A7%81"><span class="toc-text">严格差分隐私</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%BE%E5%BC%9B%E5%B7%AE%E5%88%86%E9%9A%90%E7%A7%81"><span class="toc-text">松弛差分隐私</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="toc-text">相关概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E9%A2%84%E7%AE%97"><span class="toc-text">隐私保护预算</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x02-%E6%95%8F%E6%84%9F%E5%BA%A6"><span class="toc-text">0x02 敏感度</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E5%85%A8%E5%B1%80%E6%95%8F%E6%84%9F%E5%BA%A6"><span class="toc-text">2.1 全局敏感度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E5%B1%80%E9%83%A8%E6%95%8F%E6%84%9F%E5%BA%A6"><span class="toc-text">2.2 局部敏感度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E8%AE%A1%E7%AE%97%E6%95%8F%E6%84%9F%E5%BA%A6"><span class="toc-text">2.3 计算敏感度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-%E8%AE%A1%E6%95%B0%E6%9F%A5%E8%AF%A2"><span class="toc-text">2.3.1 计数查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-%E6%B1%82%E5%92%8C%E6%9F%A5%E8%AF%A2"><span class="toc-text">2.3.2 求和查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-3-%E5%B9%B3%E5%9D%87%E6%9F%A5%E8%AF%A2"><span class="toc-text">2.3.3 平均查询</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x02-%E4%B8%89%E7%A7%8D%E6%9C%BA%E5%88%B6"><span class="toc-text">0x02 三种机制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E6%95%B0%E5%80%BC%E5%9E%8B%E6%9F%A5%E8%AF%A2"><span class="toc-text">2.1 数值型查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-Laplace%E6%9C%BA%E5%88%B6"><span class="toc-text">2.1.1 Laplace机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-%E9%AB%98%E6%96%AF%E6%9C%BA%E5%88%B6"><span class="toc-text">2.1.2 高斯机制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E9%9D%9E%E6%95%B0%E5%80%BC%E5%9E%8B%E6%9F%A5%E8%AF%A2%E2%80%93%E6%8C%87%E6%95%B0%E6%9C%BA%E5%88%B6"><span class="toc-text">2.2 非数值型查询–指数机制</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x03-Reference"><span class="toc-text">0x03 Reference</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#0x00-%E4%BB%80%E4%B9%88%E6%98%AF%E5%B7%AE%E5%88%86%E9%9A%90%E7%A7%81"><span class="toc-text">0x00 什么是差分隐私</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x01-%E6%95%B0%E5%AD%A6%E5%AE%9A%E4%B9%89"><span class="toc-text">0x01 数学定义</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%AE%9A%E4%B9%89"><span class="toc-text">基本定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%A5%E6%A0%BC%E5%B7%AE%E5%88%86%E9%9A%90%E7%A7%81"><span class="toc-text">严格差分隐私</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%BE%E5%BC%9B%E5%B7%AE%E5%88%86%E9%9A%90%E7%A7%81"><span class="toc-text">松弛差分隐私</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="toc-text">相关概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E9%A2%84%E7%AE%97"><span class="toc-text">隐私保护预算</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x02-%E6%95%8F%E6%84%9F%E5%BA%A6"><span class="toc-text">0x02 敏感度</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E5%85%A8%E5%B1%80%E6%95%8F%E6%84%9F%E5%BA%A6"><span class="toc-text">2.1 全局敏感度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E5%B1%80%E9%83%A8%E6%95%8F%E6%84%9F%E5%BA%A6"><span class="toc-text">2.2 局部敏感度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E8%AE%A1%E7%AE%97%E6%95%8F%E6%84%9F%E5%BA%A6"><span class="toc-text">2.3 计算敏感度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-%E8%AE%A1%E6%95%B0%E6%9F%A5%E8%AF%A2"><span class="toc-text">2.3.1 计数查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-%E6%B1%82%E5%92%8C%E6%9F%A5%E8%AF%A2"><span class="toc-text">2.3.2 求和查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-3-%E5%B9%B3%E5%9D%87%E6%9F%A5%E8%AF%A2"><span class="toc-text">2.3.3 平均查询</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x02-%E4%B8%89%E7%A7%8D%E6%9C%BA%E5%88%B6"><span class="toc-text">0x02 三种机制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E6%95%B0%E5%80%BC%E5%9E%8B%E6%9F%A5%E8%AF%A2"><span class="toc-text">2.1 数值型查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-%E9%AB%98%E6%96%AF%E6%9C%BA%E5%88%B6"><span class="toc-text">2.1.2 高斯机制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E9%9D%9E%E6%95%B0%E5%80%BC%E5%9E%8B%E6%9F%A5%E8%AF%A2%E2%80%93%E6%8C%87%E6%95%B0%E6%9C%BA%E5%88%B6"><span class="toc-text">2.2 非数值型查询–指数机制</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x03-Reference"><span class="toc-text">0x03 Reference</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -593,20 +603,7 @@
 <li>对于 <code>数值型</code> 数据，一般采用 <code>Laplace</code> 或者 <code>高斯</code> 机制，对得到的数值结果加入随机噪声即可实现差分隐私</li>
 <li>对于 <code>非数值型</code> 数据，一般采用 <code>指数</code> 机制并引入一个 <code>打分函数</code>，对每一种可能的输出都得到一个分数，归一化后作为查询返回的概率值。比如现在有<code>&#123;红色:20, 绿色:30, 紫色:50&#125;</code>，将数量作为 <code>打分函数</code>，那么得到的对应输出概率为 <code>红色:3e-7, 绿色:4e-5, 紫色:0.999</code>。当接收到一个查询后，就以对应的概率值返回结果</li>
 </ul>
-<h2 id="2-1-数值型查询"><a href="#2-1-数值型查询" class="headerlink" title="2.1 数值型查询"></a>2.1 数值型查询</h2><h3 id="2-1-1-Laplace机制"><a href="#2-1-1-Laplace机制" class="headerlink" title="2.1.1 Laplace机制"></a>2.1.1 Laplace机制</h3><p><strong>Laplace分布</strong></p>
-<p>Laplace分布是统计学的概念，是一种连续的概率分布。如果随机变量的概率密度函数分布为：<br>$$<br>f(\mu,b)&#x3D;\frac{1}{2b}e^{-\frac{|x-\mu|}{b}}<br>$$<br>那么它就是拉普拉斯分布。其中，$\mu$ 是位置参数，即该分布关于 $x&#x3D;\mu$ 对称；$b&gt;0$ 是尺度参数。拉普拉斯分布的期望是 $\mu$， 方差是 $2b^2$，偏度为0，峰度为3。</p>
-<p>记位置参数为 $0$，尺度参数为 $b$ 的Laplace分布为 $Lap(b)$，那么其概率密度函数为<br>$$<br>p(x)&#x3D;\frac{e^{\frac{-|x|}{b}}}{2b}<br>$$<br><strong>Laplace机制</strong></p>
-<p>给定查询查询函数 $f:\mathbb{N}^{|\mathcal{X} |}\rightarrow \mathbb{R}^k$（表示输出的数据是 $k$ 维的，如查询 <code>top-k</code>），拉普拉斯机制可表示为：<br>$$<br>F(X)&#x3D;f(x)+Lap(\frac{s}{\epsilon})&#x3D;f(x)+(Y1,Y2,…,Y_k)<br>$$<br>其中，$Y_i$ 是独立同分布的变量，为 $Lap(0, \frac{\Delta f}{\epsilon })$。</p>
-<p>接下来，证明 Laplace 满足差分隐私：</p>
-<p>假设 $p_x$ 表示 $M_L(x,f,\epsilon )$ 的 <code>pdf</code>（probability density function），$p_y$ 表示 $M_L(y,f,c)$的 <code>pdf</code>，则对于某个输出 $z$，我们有：<br>$$<br>\frac{p_x(z)}{p_y(z)}&#x3D;\prod^{k}_{i&#x3D;1}\frac{e^{-\frac{\epsilon |f(y)_i-z_i|}{\Delta f}}}{e^{-\frac{\epsilon |f(x)<em>i-z_i|}{\Delta f}}}&#x3D;\prod^{k}</em>{i&#x3D;1}e^{\frac{\epsilon(|f(y)_i-z_i|-|f(x)<em>i-z_i|)}{\Delta f}}\leq\prod^{k}</em>{i&#x3D;1}e^{\frac{\epsilon(|f(x)_i-f(y)_i|)}{\Delta f}}&#x3D;e^{\frac{\epsilon\cdot ||f(x)-f(y)||_1}{\Delta f}}\leq e^{\epsilon}<br>$$</p>
-<ul>
-<li>第一个等号表示输出 $z$ 的概率，因为 $k$ 个输出之间是相互独立，且都满足拉普拉斯分布，可以将分布概率展开</li>
-<li>第二个等号就是简单的化简</li>
-<li>第三个不等号利用的是 <code>绝对值三角不等式</code>： $|a|-|b|\leq|a\pm b|\leq |a|+|b|$</li>
-<li>第四个等号利用的是L1范数的定义</li>
-<li>第五个不等号利用的是<strong>全局敏感度的定义</strong></li>
-</ul>
-<h3 id="2-1-2-高斯机制"><a href="#2-1-2-高斯机制" class="headerlink" title="2.1.2 高斯机制"></a>2.1.2 高斯机制</h3><p><strong>高斯分布（正态分布）</strong><br>$$<br>P_{\mu,\sigma^2}(x)&#x3D;\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}<br>$$<br><strong>高斯机制</strong></p>
+<h2 id="2-1-数值型查询"><a href="#2-1-数值型查询" class="headerlink" title="2.1 数值型查询"></a>2.1 数值型查询</h2><h3 id="2-1-2-高斯机制"><a href="#2-1-2-高斯机制" class="headerlink" title="2.1.2 高斯机制"></a>2.1.2 高斯机制</h3><p><strong>高斯分布（正态分布）</strong><br>$$<br>P_{\mu,\sigma^2}(x)&#x3D;\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}<br>$$<br><strong>高斯机制</strong></p>
 <p>高斯机制是拉普拉斯机制的替代方案，不同在于加的是高斯噪声而不是拉普拉斯噪声。高斯机制不满足纯 $\epsilon-$差分隐私，但是满足 $(\epsilon,\delta)-$差分隐私。 根据高斯机制，对于返回数字的函数 $f(x)$，以下 $M(x)$ 定义满足 $(\epsilon,\delta)-$差分隐私：<br>$$<br>M(x)&#x3D; f(x)+N(0,\sigma^2)<br>$$<br>其中<br>$$<br>\sigma^2&#x3D;\frac{2\Delta f^2\log (\frac{1.25}{\delta})}{\epsilon^2}<br>$$<br>其中，$s$ 是 $f$ 的敏感度，$N(0,\sigma^2)$ 表示均值为0，方差为 $\sigma^2$ 的高斯（正态）分布采样结果。</p>
 <p><strong>敏感度</strong>定义如下：<br>$$<br>\Delta f&#x3D;\underset{D,D’:d(D,D’)\leq 1}{max} ||f(D)-f(D’)||_2<br>$$<br>与拉普拉斯敏感度定义不同，这里使用的是 <code>L2范数</code>，这与两个分布的形式有关，主要的目的也是为了方便后面差分隐私的证明。</p>
 <p><strong>缺点</strong></p>
