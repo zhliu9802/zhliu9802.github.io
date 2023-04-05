@@ -6,15 +6,15 @@
   <meta name="keywords" content=" 隐私计算 , 差分隐私 , 拉普拉斯机制 ">
   <meta name="description" content="拉普拉斯机制 | 积水成河">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="0x00 Laplace分布Laplace分布是统计学的概念，是一种连续的概率分布。如果随机变量的概率密度函数分布为：$$Lap(x|\mu,b)&#x3D;\frac{1}{2b}e^{-\frac{|x-\mu|}{b}}$$那么它就是拉普拉斯分布。其中，$\mu$ 是位置参数，即该分布关于 $x&#x3D;\mu$ 对称；$b&gt;0$ 是尺度参数。拉普拉斯分布的期望是 $\mu$， 方差">
+<meta name="description" content="2.1.2 高斯机制高斯分布（正态分布）$$P_{\mu,\sigma^2}(x)&#x3D;\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$在差分隐私中，常用的是 $\mu&#x3D;0$ 的高斯分布，即$$P_{\sigma^2}(x)&#x3D;\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{">
 <meta property="og:type" content="article">
-<meta property="og:title" content="拉普拉斯机制">
-<meta property="og:url" content="http://example.com/2023/04/05/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%9C%BA%E5%88%B6/index.html">
+<meta property="og:title" content="高斯分布">
+<meta property="og:url" content="http://example.com/2023/04/05/%E9%AB%98%E6%96%AF%E6%9C%BA%E5%88%B6/index.html">
 <meta property="og:site_name" content="积水成河">
-<meta property="og:description" content="0x00 Laplace分布Laplace分布是统计学的概念，是一种连续的概率分布。如果随机变量的概率密度函数分布为：$$Lap(x|\mu,b)&#x3D;\frac{1}{2b}e^{-\frac{|x-\mu|}{b}}$$那么它就是拉普拉斯分布。其中，$\mu$ 是位置参数，即该分布关于 $x&#x3D;\mu$ 对称；$b&gt;0$ 是尺度参数。拉普拉斯分布的期望是 $\mu$， 方差">
+<meta property="og:description" content="2.1.2 高斯机制高斯分布（正态分布）$$P_{\mu,\sigma^2}(x)&#x3D;\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$在差分隐私中，常用的是 $\mu&#x3D;0$ 的高斯分布，即$$P_{\sigma^2}(x)&#x3D;\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-04-05T06:49:59.000Z">
-<meta property="article:modified_time" content="2023-04-05T07:26:49.590Z">
+<meta property="article:published_time" content="2023-04-05T13:08:22.000Z">
+<meta property="article:modified_time" content="2023-04-05T14:26:27.216Z">
 <meta property="article:author" content="zhliu">
 <meta property="article:tag" content="隐私计算">
 <meta property="article:tag" content="差分隐私">
@@ -392,10 +392,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>指数机制</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>git</a>
             </li>
         
@@ -412,20 +408,20 @@
         
         
         <a  class="全部文章 隐私计算 差分隐私 "
+           href="/2023/04/05/%E9%AB%98%E6%96%AF%E6%9C%BA%E5%88%B6/"
+           data-tag="隐私计算,差分隐私,拉普拉斯机制"
+           data-author="" >
+            <span class="post-title" title="高斯分布">高斯分布</span>
+            <span class="post-date" title="2023-04-05 21:08:22">2023/04/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 隐私计算 差分隐私 "
            href="/2023/04/05/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%9C%BA%E5%88%B6/"
            data-tag="隐私计算,差分隐私,拉普拉斯机制"
            data-author="" >
             <span class="post-title" title="拉普拉斯机制">拉普拉斯机制</span>
             <span class="post-date" title="2023-04-05 14:49:59">2023/04/05</span>
-        </a>
-        
-        
-        <a  class="全部文章 隐私计算 差分隐私 "
-           href="/2023/04/05/%E6%8C%87%E6%95%B0%E6%9C%BA%E5%88%B6/"
-           data-tag="隐私计算,差分隐私,指数机制"
-           data-author="" >
-            <span class="post-title" title="指数机制">指数机制</span>
-            <span class="post-date" title="2023-04-05 10:06:24">2023/04/05</span>
         </a>
         
         
@@ -524,7 +520,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-04-05 15:26:49'>2023-04-05 14:49</time>
+            发布时间 : <time class="date" title='最后更新: 2023-04-05 21:07:53'>2023-04-05 14:49</time>
         
     </div>
     <div class="article-meta">
@@ -564,6 +560,8 @@
       
         <h1 id="0x00-Laplace分布"><a href="#0x00-Laplace分布" class="headerlink" title="0x00 Laplace分布"></a>0x00 Laplace分布</h1><p>Laplace分布是统计学的概念，是一种连续的概率分布。如果随机变量的概率密度函数分布为：<br>$$<br>Lap(x|\mu,b)&#x3D;\frac{1}{2b}e^{-\frac{|x-\mu|}{b}}<br>$$<br>那么它就是拉普拉斯分布。其中，$\mu$ 是位置参数，即该分布关于 $x&#x3D;\mu$ 对称；$b&gt;0$ 是尺度参数。拉普拉斯分布的期望是 $\mu$， 方差是 $2b^2$，偏度为0，峰度为3。</p>
 <p>记位置参数为 $0$，尺度参数为 $b$ 的Laplace分布为 $Lap(b)$，那么其概率密度函数为<br>$$<br>Lap(x|b)&#x3D;\frac{e^{\frac{-|x|}{b}}}{2b}<br>$$</p>
+<img src="/2023/04/05/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%9C%BA%E5%88%B6/拉普拉斯分布示意图.jpg" style="zoom:80%;">
+
 <h1 id="0x01-Laplace机制"><a href="#0x01-Laplace机制" class="headerlink" title="0x01 Laplace机制"></a>0x01 Laplace机制</h1><p>拉普拉斯机制主要是针对<strong>数值型</strong>的查询，即 $f:\mathbb{N}^{|\mathcal{X}|}\rightarrow \mathbb{R}^k$，映射数据库为 $k$ 个实数</p>
 <p><strong>$l1$敏感度</strong></p>
 <blockquote>
@@ -576,14 +574,48 @@
 </blockquote>
 <p>拉普拉斯机制简单来说就是在 $f$ 输出的 $k$ 个实数上加上噪声，噪声具体加多少由 $\Delta f$ 决定。如果 $\Delta f$ 比较大，那么相应的噪声的幅度就应该大一些。</p>
 <p>接下来，证明 Laplace 满足差分隐私：</p>
-<p>假设 $p_x$ 表示 $M_L(x,f,\epsilon )$ 的 <code>pdf</code>（probability density function），$p_y$ 表示 $M_L(y,f,c)$的 <code>pdf</code>，则对于某个输出 $z$，我们有：<br>$$<br>\frac{p_x(z)}{p_y(z)}&#x3D;\prod^{k}_{i&#x3D;1}\frac{e^{-\frac{\epsilon |f(y)_i-z_i|}{\Delta f}}}{e^{-\frac{\epsilon |f(x)<em>i-z_i|}{\Delta f}}}&#x3D;\prod^{k}</em>{i&#x3D;1}e^{\frac{\epsilon(|f(y)_i-z_i|-|f(x)<em>i-z_i|)}{\Delta f}}\leq\prod^{k}</em>{i&#x3D;1}e^{\frac{\epsilon(|f(x)_i-f(y)_i|)}{\Delta f}}&#x3D;e^{\frac{\epsilon\cdot ||f(x)-f(y)||_1}{\Delta f}}\leq e^{\epsilon}<br>$$</p>
+<p>$$<br>\frac{Pr(A(D)&#x3D;t)}{Pr(A(D’)&#x3D;t)}&#x3D;\frac{Pr(F(D)+X&#x3D;t)}{Pr(F(D’)+X&#x3D;t)}&#x3D;\frac{Pr(X&#x3D;t-F(D))}{Pr(X&#x3D;t-F(D’))}&#x3D;\frac{\frac{e^{\frac{-|t-F(D)|}{b}}}{2b}}{\frac{e^{\frac{-|t-F(D’)|}{b}}}{2b}}&#x3D;e^{\frac{|t-F(D)|-|t-F(D’)|}{b}}\leq e^{\frac{|F(D)-F(D’)|}{b}}\leq e^{\frac{\Delta f}{b}}\leq e^{\epsilon}\<br>\Rightarrow \frac{\Delta f}{b}\leq\epsilon\<br>\Rightarrow b\geq \frac{\Delta f}{\epsilon}<br>$$</p>
+<p><strong>几点说明：</strong></p>
 <ul>
-<li>第一个等号表示输出 $z$ 的概率，因为 $k$ 个输出之间是相互独立，且都满足拉普拉斯分布，可以将分布概率展开</li>
-<li>第二个等号就是简单的化简</li>
-<li>第三个不等号利用的是 <code>绝对值三角不等式</code>： $|a|-|b|\leq|a\pm b|\leq |a|+|b|$</li>
-<li>第四个等号利用的是 <code>L1范数</code> 的定义</li>
-<li>第五个不等号利用的是<strong>全局敏感度的定义</strong></li>
+<li>根据差分隐私定义：$\frac{Pr(A(D)&#x3D;t)}{Pr(A(D’)&#x3D;t)}\leq e^{\epsilon}$，可知，当 $\epsilon$ 越大，说明二者的概率分布相似度越小，隐私的泄露风险越高</li>
+<li>根据推导的公式：$b\geq\frac{\Delta f}{\epsilon}$，$\epsilon$ 越小，$b$ 越大，拉普拉斯分布的图像就越平滑</li>
 </ul>
+<p><strong>代码实现</strong></p>
+<p>python</p>
+<pre><code class="c++">import numpy as np
+
+def lap_one():
+    realResult = 50
+    loc, scale = 0, 1
+    s = np.random.laplace(loc, scale, 10)
+    print(s)
+    result = realResult + s[0]
+    print(result)
+
+def noisy_count(sensitivety, epsilon):
+    beta = sensitivety/epsilon
+    u1 = np.random.random()
+    u2 = np.random.random()
+    if u1 &lt;= 0.5:  
+        noisy_value = -beta*np.log(1.-u2)  
+    else:
+        noisy_value = beta*np.log(u2) 
+
+    return noisy_value
+
+def laplace_mech(data,sensitivety,epsilon):  
+    for i in range(len(data)):  
+        data[i] += noisy_count(sensitivety,epsilon)  
+    return data
+
+if __name__ == &quot;__main__&quot;:
+    sensitivety = 2
+    epsilon = 2
+    real_data = [1, 2, 3, 4, 5]
+    dp_data = laplace_mech(real_data, sensitivety, epsilon)
+    for item in dp_data:
+        print(int(item))
+</code></pre>
 <h1 id="0x02-应用实例"><a href="#0x02-应用实例" class="headerlink" title="0x02 应用实例"></a>0x02 应用实例</h1><h2 id="2-1-计数查询"><a href="#2-1-计数查询" class="headerlink" title="2.1 计数查询"></a>2.1 计数查询</h2><p>计数查询一般有形式：在数据库中有多少个记录满足性质 $P$ ？</p>
 <p>由于计数查询的敏感度 $\Delta f&#x3D;1$（增加或者删除一个记录会使得计数至多改变1），所以根据拉普拉斯的机制，在计数查询上加上$Lap(\frac{1}{\epsilon}$) 采样的噪声是满足 $(\epsilon, 0)-$差分隐私的。</p>
 <h2 id="2-2-直方图查询"><a href="#2-2-直方图查询" class="headerlink" title="2.2 直方图查询"></a>2.2 直方图查询</h2><p>假如我们有一个数据库，包含学生姓名、考试等级以及其他信息，我们想统计多少个学生考试等级为 $A$，多少个学生考试等级为 $B$，以此类推。这就是一个直方图查询的例子。</p>
