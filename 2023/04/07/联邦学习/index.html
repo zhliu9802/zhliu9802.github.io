@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>高斯分布 | 积水成河</title>
-  <meta name="keywords" content=" 隐私计算 , 差分隐私 , 拉普拉斯机制 ">
-  <meta name="description" content="高斯分布 | 积水成河">
+  <title>联邦学习 | 积水成河</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="联邦学习 | 积水成河">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="今年来，研究人员们正着眼于开发能够在机器学习系统中使用的隐私保护技术，由此产生的系统便被称为面向隐私保护的机器学习（Privacy-Preserving Machine Learning，PPML）系统。 安全多方计算安全多方计算的定义不经意传输Bellare-Micali构造姚氏混淆电路不经意传输扩展秘密共享多方安全计算在PPML中的应用过去人们已经为 PPML 设计并实现了各种基于安全多方计算">
 <meta property="og:type" content="article">
@@ -502,40 +502,19 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-高斯机制" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-联邦学习" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">高斯分布</h1>
+        <h1 class="article-title">联邦学习</h1>
     
     <div class="article-meta">
         
         
         
-        <span class="book">
-            <i class="iconfont icon-category"></i>
-            
-            
-            <a  data-rel="隐私计算">隐私计算</a> > 
-            
-            <a  data-rel="隐私计算&lt;---&gt;差分隐私">差分隐私</a>
-            
-        </span>
-        
-        
-        <span class="tag">
-            <i class="iconfont icon-tag"></i>
-            
-            <a class="color5">隐私计算</a>
-            
-            <a class="color5">差分隐私</a>
-            
-            <a class="color2">拉普拉斯机制</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-04-05 22:26:27'>2023-04-05 21:08</time>
+            发布时间 : <time class="date" title='最后更新: 2023-04-07 15:59:14'>2023-04-07 15:32</time>
         
     </div>
     <div class="article-meta">
@@ -557,7 +536,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-%E9%AB%98%E6%96%AF%E6%9C%BA%E5%88%B6"><span class="toc-text">2.1.2 高斯机制</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0"><span class="toc-text">联邦学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-text">定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-text">分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%AA%E5%90%91%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0"><span class="toc-text">横向联邦学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%B5%E5%90%91%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0"><span class="toc-text">纵向联邦学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%94%E9%82%A6%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0"><span class="toc-text">联邦迁移学习</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E6%BA%90%E5%B9%B3%E5%8F%B0"><span class="toc-text">开源平台</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FATE"><span class="toc-text">FATE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TFF"><span class="toc-text">TFF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TensorFlow-Encrypted"><span class="toc-text">TensorFlow-Encrypted</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#coMind"><span class="toc-text">coMind</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Horovod"><span class="toc-text">Horovod</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OpenMined-x2F-PySyft"><span class="toc-text">OpenMined&#x2F;PySyft</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -573,20 +552,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="2-1-2-高斯机制"><a href="#2-1-2-高斯机制" class="headerlink" title="2.1.2 高斯机制"></a>2.1.2 高斯机制</h3><p><strong>高斯分布（正态分布）</strong><br>$$<br>P_{\mu,\sigma^2}(x)&#x3D;\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}<br>$$<br>在差分隐私中，常用的是 $\mu&#x3D;0$ 的高斯分布，即<br>$$<br>P_{\sigma^2}(x)&#x3D;\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{x^2}{2\sigma^2}}<br>$$</p>
-<p><strong>高斯机制</strong></p>
-<p>高斯机制是拉普拉斯机制的替代方案，不同在于加的是高斯噪声而不是拉普拉斯噪声。高斯机制不满足纯 $\epsilon-$差分隐私，但是满足 $(\epsilon,\delta)-$差分隐私。 </p>
-<p>如何通过添加高斯分布的噪声，即 $\sigma$ 的取值为多少时，使得查询结果满足差分隐私？</p>
-<p>首先我们尝试按照 $\epsilon-$ 差分隐私的定义来进行推导：<br>$$<br>\frac{Pr(A(D)&#x3D;t)}{Pr(A(D’)&#x3D;t)}&#x3D;\frac{Pr(F(D)+X&#x3D;t)}{Pr(F(D’)+X&#x3D;t)}&#x3D;\frac{Pr(X&#x3D;t-F(D))}{Pr(X&#x3D;t-F(D’))}\<br>&#x3D;\frac{e^{-\frac{(t-F(D))^2}{2\sigma^2}}}{e^{-\frac{(t-F(D’))^2}{2\sigma^2}}}\<br>&#x3D;e^{\frac{(t-F(D’))^2-(t-F(D))^2}{2\sigma^2}}\<br>$$<br>令 $X&#x3D;t-F(D)$，则 $t-F(D’)&#x3D;X+\Delta f$，上式就可以化简为<br>$$<br>e^{\frac{(X+\Delta f)^2-X^2}{2\sigma^2}}&#x3D;e^{\frac{2X\Delta f+\Delta f^2}{2\sigma^2}}\leq e^{\epsilon}\<br>\Rightarrow \frac{2X\Delta f+\Delta f^2}{2\sigma^2}\leq \epsilon<br>\Rightarrow X\leq \frac{\sigma^2\epsilon}{\Delta f}-\frac{\Delta f}{2}<br>$$<br>我们发现 $X$ 消不掉，最终得到一个亚高斯分布的值。且这个 $X$ 是一个高斯分布，它不可能小于一个定值。因此高斯机制不符合 $\epsilon-$差分隐私定义。</p>
-<p>那么，接下来该咋搞呢？</p>
-<p>假设我们让 $Pr(X\leq \frac{\sigma^2\epsilon}{\Delta f}-\frac{\Delta f}{2})&#x3D;1-\delta$，即我们强制让 $X$ 有 $1-\delta$ 的概率小于 $\frac{\sigma^2\epsilon}{\Delta f}-\frac{\Delta f}{2}$，换句话来说，下面这个等式也成立<br>$$<br>Pr(|X|\geq \frac{\sigma^2\epsilon}{\Delta f}-\frac{\Delta f}{2})&lt;\delta<br>$$<br>根据对称<br>$$<br>Pr(X\geq \frac{\sigma^2\epsilon}{\Delta f}-\frac{\Delta f}{2})&lt;\frac{\delta}{2}<br>$$<br>令 $t&#x3D;\frac{\sigma^2\epsilon}{\Delta f}-\frac{\Delta f}{2}$：<br>$$<br>Pr(X&gt;t)&#x3D;\int_t^{+\infty}\frac{e^{\frac{-x^2}{2\sigma^2}}}{\sqrt{2\pi}\sigma}dx\<br>&#x3D;\frac{\sigma}{\sqrt{2\pi}t}e^{\frac{-t^2}{2\sigma^2}}<br>$$<br>即：<br>$$<br>\frac{\sigma}{\sqrt{2\pi}t}e^{\frac{-t^2}{2\sigma^2}}&lt;\frac{\delta}{2}\<br>\Rightarrow \ln\frac{t}{\sigma}+\frac{t^2}{2\sigma^2}&gt;\ln\frac{2}{\sqrt{2\pi}\delta}\<br>\Rightarrow \ln\frac{\frac{\sigma^2\epsilon}{\Delta f}-\frac{\Delta f}{2}}{\sigma}+\frac{(\frac{\sigma^2\epsilon}{\Delta f}-\frac{\Delta f}{2})^2}{2\sigma^2}&gt;\ln\frac{2}{\sqrt{2\pi}\delta}\<br>\Rightarrow 下面太难不会了\<br>\Rightarrow \sigma^2\geq\frac{2\Delta f^2\log (\frac{1.25}{\delta})}{\epsilon^2}<br>$$<br>其中，$\Delta f$ 是 $f$ 的敏感度，$N(0,\sigma^2)$ 表示均值为0，方差为 $\sigma^2$ 的高斯（正态）分布采样结果。</p>
-<p><strong>定义</strong></p>
-<p>根据高斯机制，对于返回数字的函数 $f(x)$，以下 $M(x)$ 定义满足 $(\epsilon,\delta)-$差分隐私：<br>$$<br>M(x)&#x3D; f(x)+N(0,\sigma^2)<br>$$<br><strong>敏感度</strong>定义如下：<br>$$<br>\Delta f&#x3D;\underset{D,D’:d(D,D’)\leq 1}{max} ||f(D)-f(D’)||_2<br>$$<br>与拉普拉斯敏感度定义不同，这里使用的是 <code>L2范数</code>，这与两个分布的形式有关，主要的目的也是为了方便后面差分隐私的证明。</p>
-<p><strong>缺点</strong></p>
-<ol>
-<li>高斯机制需要使用松弛 $(\sigma, \delta)-$差分隐私定义</li>
-<li>该机制的准确性不如拉普拉斯机制</li>
-</ol>
+        <h1 id="联邦学习"><a href="#联邦学习" class="headerlink" title="联邦学习"></a>联邦学习</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>设矩阵 $\mathcal{D}_i$ 表示第 <code>i</code> 个参与方的数据；设矩阵 $\mathcal{D}_i$ 的每一行表示一个数据样本，每一列表示一个具体的数据特征（<code>feature</code>）。同时，一些数据集还可能包含标签信息。将特征空间设为 $\mathcal{X}$ ，数据标签（label）空间设为 $\mathcal{Y}$，数据样本ID空间设为 $\mathcal{I}$。这样，这三个空间组成了一个训练数据集 $\mathcal{(I,X,Y)}$。不同参与方之间的数据特征空间和样本ID空间可能是不同的。根据训练数据在不同参与方之间的数据特征空间和样本ID空间的分布情况，将联邦学习划分为<strong>横向联邦学习</strong>（Horizontal Federated Learning，HFL）、<strong>纵向联邦学习</strong>（Vertical Federated Learning，VHL）和<strong>联邦迁移学习</strong>（Federated Transfer Learning，FTL）。</p>
+<blockquote>
+<p>横向联邦学习和纵向联邦学习快速区分方法：</p>
+<p>假设我们现在有合并后的数据集，</p>
+<ul>
+<li>将该数据集上下分割（即水平切了一刀）——横向联邦学习，说明用户的特征是一样的，只是将用户ID进行了聚合</li>
+<li>将该数据集左右分割（即垂直切了一刀）——纵向联邦学习，说明用户ID是一样的，用户特征进行聚合</li>
+</ul>
+</blockquote>
+<h3 id="横向联邦学习"><a href="#横向联邦学习" class="headerlink" title="横向联邦学习"></a>横向联邦学习</h3><img src="/2023/04/07/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/横向联邦学习示意图.png" alt="横向联邦学习示意图" style="zoom:80%;">
+
+<p>横向联邦学习适用于联邦学习的参与方的数据有重叠的数据特征，即数据特征在各参与方之间是对齐的，但是参与方拥有的数据样本是不同的。它类似于在表格试图中将数据水平划分的情况。因此，也将横向联邦学习称作<strong>按样本划分的联邦学习</strong>（Sample-Partitioned Federated Learning 或 Example-Partitioned Federated Learning）。</p>
+<p>例如，当联邦学习的参与方是两家服务于不同区域市场的银行时，他们虽然可能只有很少的重叠用户，但是客户的数据可能因为相似的商业模式而有非常相似的特征空间。这也就是说，这两家银行的用户部分重叠很少，而数据特征的重叠部分很大，因此，这两家银行可以通过横向联邦学习来协同建立一个机器学习模型。</p>
+<h3 id="纵向联邦学习"><a href="#纵向联邦学习" class="headerlink" title="纵向联邦学习"></a>纵向联邦学习</h3><p>纵向联邦学习适用于参与方的训练数据有重叠的数据样本，即参与方之间的数据样本是对齐的，但是在数据特征上有所不同。它类似于数据在表格视图中将数据垂直划分的情况。因此，也将纵向联邦学习称作按特征划分的联邦学习（Feature-Partitioned Federated Learning）。</p>
+<p>例如，当两家公司（一家银行，一家电子商务公司）提供不同的服务，但在客户群体上有非常大的交集时，他们可以在各自不同的特征空间上协作，为各自得到一个更好的机器学习模型。也就是说，这两家公司的数据集在用户上重叠非常大，但是在数据特征重叠较小，因此这两家公司可以通过纵向联邦学习来协同建立一个机器学习模型</p>
+<img src="/2023/04/07/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/纵向联邦学习示意图.png" alt="纵向联邦学习示意图" style="zoom:80%;">
+
+<h3 id="联邦迁移学习"><a href="#联邦迁移学习" class="headerlink" title="联邦迁移学习"></a>联邦迁移学习</h3><p>联邦迁移学习适用于参与方的数据样本和数据特征重叠都很少的情况。</p>
+<img src="/2023/04/07/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/联邦迁移学习示意图.png" alt="联邦迁移学习示意图" style="zoom:80%;">
+
+<h2 id="开源平台"><a href="#开源平台" class="headerlink" title="开源平台"></a>开源平台</h2><h3 id="FATE"><a href="#FATE" class="headerlink" title="FATE"></a>FATE</h3><h3 id="TFF"><a href="#TFF" class="headerlink" title="TFF"></a>TFF</h3><h3 id="TensorFlow-Encrypted"><a href="#TensorFlow-Encrypted" class="headerlink" title="TensorFlow-Encrypted"></a>TensorFlow-Encrypted</h3><h3 id="coMind"><a href="#coMind" class="headerlink" title="coMind"></a>coMind</h3><h3 id="Horovod"><a href="#Horovod" class="headerlink" title="Horovod"></a>Horovod</h3><h3 id="OpenMined-x2F-PySyft"><a href="#OpenMined-x2F-PySyft" class="headerlink" title="OpenMined&#x2F;PySyft"></a>OpenMined&#x2F;PySyft</h3><p>提供了隐私保护的两种方法：联邦学习和差分隐私。OpenMined 还进一步支持多方安全计算和同态加密，能够支持两种以上的安全计算方法。可用于搭建安全和扩展性的机器学习模型的联邦学习框架，OpenMined已经将 PySyft 框架开源。PySyft 是 PyTorch 的一个简单外挂拓展，对于熟悉PyTorch 的用户，使用 PySyft 实现联邦学习系统是十分简单的。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 zhliu9802@163.com </span>

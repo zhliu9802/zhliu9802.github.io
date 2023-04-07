@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title>隐私保护机器学习</title>
+      <link href="/2023/04/07/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2023/04/07/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<p>今年来，研究人员们正着眼于开发能够在机器学习系统中使用的隐私保护技术，由此产生的系统便被称为面向隐私保护的机器学习（Privacy-Preserving Machine Learning，PPML）系统。</p><h1 id="安全多方计算"><a href="#安全多方计算" class="headerlink" title="安全多方计算"></a>安全多方计算</h1><h2 id="安全多方计算的定义"><a href="#安全多方计算的定义" class="headerlink" title="安全多方计算的定义"></a>安全多方计算的定义</h2><h2 id="不经意传输"><a href="#不经意传输" class="headerlink" title="不经意传输"></a>不经意传输</h2><h3 id="Bellare-Micali构造"><a href="#Bellare-Micali构造" class="headerlink" title="Bellare-Micali构造"></a>Bellare-Micali构造</h3><h3 id="姚氏混淆电路"><a href="#姚氏混淆电路" class="headerlink" title="姚氏混淆电路"></a>姚氏混淆电路</h3><h3 id="不经意传输扩展"><a href="#不经意传输扩展" class="headerlink" title="不经意传输扩展"></a>不经意传输扩展</h3><h2 id="秘密共享"><a href="#秘密共享" class="headerlink" title="秘密共享"></a>秘密共享</h2><h2 id="多方安全计算在PPML中的应用"><a href="#多方安全计算在PPML中的应用" class="headerlink" title="多方安全计算在PPML中的应用"></a>多方安全计算在PPML中的应用</h2><p>过去人们已经为 PPML 设计并实现了各种基于安全多方计算的方法。 大多数基于安全多方计算的PPML方法利⽤两阶段架构，包括离线阶段和在线阶段。⼤多数密码操作都在离线阶段执⾏，在离线阶段⽣成乘法三元 组。之后，于在线阶段使⽤离线阶段⽣成的乘法三元组对机器学习模型进 ⾏训练。DeepSecure[113]是⼀个基于混淆电路的安全神经⽹络推理框架，其 中推理函数必须表⽰为⼀个布尔电路。在加密电路中，计算和通信开销只 取决于电路中与门的总数和。</p><p>SecureML[32]是另⼀种使⽤两阶段架构的PPML两⽅框架。在联邦学习 中，各⽅将其数据的算术共享信息，分配给两个运⾏着安全的两⽅模型训 练协议的⾮勾结服务器。该⽅法提出了基于线性同态加密（Linearly Homomorphic Encryption Scheme，LHE）和基于不经意传输的离线乘法三 元组⽣成协议。在线阶段以算术秘密共享和除法混淆电路为基础。因此， 模型训练中只允许进⾏线性运算，并且会对⾮线性函数进⾏多种近似计 算。 </p><p>Chameleon框架是另⼀种基于神经⽹络模型推理的ABY⽅法的混合安 全多⽅计算框架[104]。算术秘密共享被⽤于执⾏线性运算操作，混淆电路和 GMW被⽤于进⾏⾮线性操作。该框架还实现了⼀种转换协议，以便在不 同协议间进⾏数据表⽰。 </p><p>基于不经意传输的隐私保护ID3学习发表于⽂献[114]。Shamir的阈值 秘密共享被⽤于PPML的安全模型聚合，针对诚实但好奇的敌⼿和恶意的 敌⼿具有安全性。⽂献[115]中⼀组客户使⽤安全多⽅计算以评估他们的隐 私输⼊模型的平均值，并将平均值公开给参数服务器进⾏模型更新。近年来，研究⼈员对基于安全多⽅计算的防范恶意破坏的各类⽅法进⾏了研 究。例如，⽂献[116]研究了线性回归和逻辑回归训练与评估。⽂献[117] 的作者认为 能够有效地保护隐私机器学习不受不诚实的多数⼈ 攻击，并实现了决策树和⽀持向量机（SVM）评估算法。</p><h1 id="同态加密"><a href="#同态加密" class="headerlink" title="同态加密"></a>同态加密</h1><h1 id="差分隐私"><a href="#差分隐私" class="headerlink" title="差分隐私"></a>差分隐私</h1>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>联邦学习</title>
+      <link href="/2023/04/07/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2023/04/07/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="联邦学习"><a href="#联邦学习" class="headerlink" title="联邦学习"></a>联邦学习</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>设矩阵 $\mathcal{D}_i$ 表示第 <code>i</code> 个参与方的数据；设矩阵 $\mathcal{D}_i$ 的每一行表示一个数据样本，每一列表示一个具体的数据特征（<code>feature</code>）。同时，一些数据集还可能包含标签信息。将特征空间设为 $\mathcal{X}$ ，数据标签（label）空间设为 $\mathcal{Y}$，数据样本ID空间设为 $\mathcal{I}$。这样，这三个空间组成了一个训练数据集 $\mathcal{(I,X,Y)}$。不同参与方之间的数据特征空间和样本ID空间可能是不同的。根据训练数据在不同参与方之间的数据特征空间和样本ID空间的分布情况，将联邦学习划分为<strong>横向联邦学习</strong>（Horizontal Federated Learning，HFL）、<strong>纵向联邦学习</strong>（Vertical Federated Learning，VHL）和<strong>联邦迁移学习</strong>（Federated Transfer Learning，FTL）。</p><blockquote><p>横向联邦学习和纵向联邦学习快速区分方法：</p><p>假设我们现在有合并后的数据集，</p><ul><li>将该数据集上下分割（即水平切了一刀）——横向联邦学习，说明用户的特征是一样的，只是将用户ID进行了聚合</li><li>将该数据集左右分割（即垂直切了一刀）——纵向联邦学习，说明用户ID是一样的，用户特征进行聚合</li></ul></blockquote><h3 id="横向联邦学习"><a href="#横向联邦学习" class="headerlink" title="横向联邦学习"></a>横向联邦学习</h3><img src="/2023/04/07/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/横向联邦学习示意图.png" alt="横向联邦学习示意图" style="zoom:80%;"><p>横向联邦学习适用于联邦学习的参与方的数据有重叠的数据特征，即数据特征在各参与方之间是对齐的，但是参与方拥有的数据样本是不同的。它类似于在表格试图中将数据水平划分的情况。因此，也将横向联邦学习称作<strong>按样本划分的联邦学习</strong>（Sample-Partitioned Federated Learning 或 Example-Partitioned Federated Learning）。</p><p>例如，当联邦学习的参与方是两家服务于不同区域市场的银行时，他们虽然可能只有很少的重叠用户，但是客户的数据可能因为相似的商业模式而有非常相似的特征空间。这也就是说，这两家银行的用户部分重叠很少，而数据特征的重叠部分很大，因此，这两家银行可以通过横向联邦学习来协同建立一个机器学习模型。</p><h3 id="纵向联邦学习"><a href="#纵向联邦学习" class="headerlink" title="纵向联邦学习"></a>纵向联邦学习</h3><p>纵向联邦学习适用于参与方的训练数据有重叠的数据样本，即参与方之间的数据样本是对齐的，但是在数据特征上有所不同。它类似于数据在表格视图中将数据垂直划分的情况。因此，也将纵向联邦学习称作按特征划分的联邦学习（Feature-Partitioned Federated Learning）。</p><p>例如，当两家公司（一家银行，一家电子商务公司）提供不同的服务，但在客户群体上有非常大的交集时，他们可以在各自不同的特征空间上协作，为各自得到一个更好的机器学习模型。也就是说，这两家公司的数据集在用户上重叠非常大，但是在数据特征重叠较小，因此这两家公司可以通过纵向联邦学习来协同建立一个机器学习模型</p><img src="/2023/04/07/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/纵向联邦学习示意图.png" alt="纵向联邦学习示意图" style="zoom:80%;"><h3 id="联邦迁移学习"><a href="#联邦迁移学习" class="headerlink" title="联邦迁移学习"></a>联邦迁移学习</h3><p>联邦迁移学习适用于参与方的数据样本和数据特征重叠都很少的情况。</p><img src="/2023/04/07/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/联邦迁移学习示意图.png" alt="联邦迁移学习示意图" style="zoom:80%;"><h2 id="开源平台"><a href="#开源平台" class="headerlink" title="开源平台"></a>开源平台</h2><h3 id="FATE"><a href="#FATE" class="headerlink" title="FATE"></a>FATE</h3><h3 id="TFF"><a href="#TFF" class="headerlink" title="TFF"></a>TFF</h3><h3 id="TensorFlow-Encrypted"><a href="#TensorFlow-Encrypted" class="headerlink" title="TensorFlow-Encrypted"></a>TensorFlow-Encrypted</h3><h3 id="coMind"><a href="#coMind" class="headerlink" title="coMind"></a>coMind</h3><h3 id="Horovod"><a href="#Horovod" class="headerlink" title="Horovod"></a>Horovod</h3><h3 id="OpenMined-x2F-PySyft"><a href="#OpenMined-x2F-PySyft" class="headerlink" title="OpenMined&#x2F;PySyft"></a>OpenMined&#x2F;PySyft</h3><p>提供了隐私保护的两种方法：联邦学习和差分隐私。OpenMined 还进一步支持多方安全计算和同态加密，能够支持两种以上的安全计算方法。可用于搭建安全和扩展性的机器学习模型的联邦学习框架，OpenMined已经将 PySyft 框架开源。PySyft 是 PyTorch 的一个简单外挂拓展，对于熟悉PyTorch 的用户，使用 PySyft 实现联邦学习系统是十分简单的。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>高斯分布</title>
       <link href="/2023/04/05/%E9%AB%98%E6%96%AF%E6%9C%BA%E5%88%B6/"/>
       <url>/2023/04/05/%E9%AB%98%E6%96%AF%E6%9C%BA%E5%88%B6/</url>
